@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Ojuju:wght@200..800&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --backcolor: #1E1E1E;
+    --verde: #6FFF57;
+    --branco: #FFFFFF;
+    --botaoati: #3A375E;
+    --botao: rgba(58,55,94,0.5);
+    --textofundo: rgba(58,55,94,0.3);
+    --azul: #2A7AE4;
+    --fonte:"Saira Condensed", sans-serif;
+}
+
+body{
+    background-color: var(--backcolor);
+    color: var(--branco);
+    font-family: var(--fonte);
+}
+
+.linha{
+    background-color: var(--azul);
+    width: 100%;
+    height: 0.25vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.um {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.titulo {
+    font-family: var(--fonte);
+    font-size: 2.2vw;
+    margin-bottom: 20px;
+}
+
+.titulo span{
+    color: var(--azul);
+}
+
+.botoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.botao {
+    font-family: var(--fonte);
+    background-color: var(--botao);
+    color: var(--branco);
+    padding: 1em;
+    justify-content: center;
+    font-size: 18px;
+    align-items: center;
+    width: 100%; /* ajustado para 100% */
+    border-top: 4px solid var(--botaoati);
+    border-bottom: 4px solid var(--botaoati);
+    border-right: 4px solid var(--botaoati);
+    border-left: 4px solid var(--botaoati);
+    box-sizing: border-box; /* Garante que o padding não aumente a largura */
+}
+
+.botao.ativo {
+    background-color: var(--botaoati);
+    border-bottom: 4px solid var(--azul);
+    cursor: pointer;
+}
+
+.botao:hover{
+    cursor: pointer;
+}
+
+.botoes {
+    display: block;
+}
+
+.botao:first-child{
+    border-radius: 40px 40px 0 0;
+}
+
+.abas-texto{
+    background-color: var(--textofundo);
+    padding: 40px;
+    border-radius: 0 0 40px 40px;
+}
+
+.aba-conteudo.ativo{
+    display: block;
+}
+
+.aba-conteudo{
+    display: none;
+}
+
+.conteudo-principal{
+    font-size: 28px;
+    text-align: center;
+}
+
+.conteudo-secundario{
+    text-align: center;
+    color: var(--azul);
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+    .botoes {
+        display: flex;
+    }
+
+    .botao {
+        width: 25%; /* ajustado para 25% */
+        border-top: none;
+    }
+
+    .botao:first-child {
+        border-radius: 40px 0 0 0;
+    }
+
+    .botao:last-child {
+        border-radius: 0 40px 0 0;
+    }
+}
